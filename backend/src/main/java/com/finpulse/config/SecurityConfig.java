@@ -1,3 +1,4 @@
+```java
 package com.finpulse.config;
 
 import com.finpulse.security.CustomUserDetailsService;
@@ -46,7 +47,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+    public AuthenticationManager authenticationManager(
+            AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
 
@@ -55,17 +57,48 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-        .requestMatchers("/", "/api/auth/**").permitAll()
-        .requestMatchers("/api/admin/**").hasRole("ADMIN")
-        .requestMatchers("/api/users/**", "/api/transactions/**", "/api/goals/**",
-                "/api/analytics/**", "/api/ai/**").authenticated()
-        .anyRequest().authenticated()
+                        .requestMatchers("/", "/api/auth/**").permitAll()
+                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers(
+                                "/api/users/**",
+                                "/api/transactions/**",
+                                "/api/goals/**",
+                                "/api/analytics/**",
+                                "/api/ai/**"
+                        ).authenticated()
+                        .anyRequest().authenticated()
                 )
                 .authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(
+                        jwtAuthenticationFilter,
+                        UsernamePasswordAuthenticationFilter.class
+                );
 
         return http.build();
     }
 }
+```
+
+### Open it directly in Notepad
+
+Run:
+
+```powershell
+notepad "C:\Users\snehadeepika\OneDrive\Desktop\Ai\Ai-project\backend\src\main\java\com\finpulse\config\SecurityConfig.java"
+```
+
+Paste the code above → **Ctrl + S** → close Notepad.
+
+Then run:
+
+```powershell
+cd "C:\Users\snehadeepika\OneDrive\Desktop\Ai\Ai-project"
+git add backend/src/main/java/com/finpulse/config/SecurityConfig.java
+git commit -m "Allow public backend root endpoint"
+git push origin main
+```
+
+Then wait for **Render → Live**.
