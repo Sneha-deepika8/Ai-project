@@ -1,4 +1,3 @@
-```java
 package com.finpulse.config;
 
 import com.finpulse.security.CustomUserDetailsService;
@@ -80,25 +79,3 @@ public class SecurityConfig {
         return http.build();
     }
 }
-```
-
-### Open it directly in Notepad
-
-Run:
-
-```powershell
-notepad "C:\Users\snehadeepika\OneDrive\Desktop\Ai\Ai-project\backend\src\main\java\com\finpulse\config\SecurityConfig.java"
-```
-
-Paste the code above → **Ctrl + S** → close Notepad.
-
-Then run:
-
-```powershell
-cd "C:\Users\snehadeepika\OneDrive\Desktop\Ai\Ai-project"
-git add backend/src/main/java/com/finpulse/config/SecurityConfig.java
-git commit -m "Allow public backend root endpoint"
-git push origin main
-```
-
-Then wait for **Render → Live**.
