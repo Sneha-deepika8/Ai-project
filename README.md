@@ -2,9 +2,7 @@
 
 FinPulse AI is a full-stack personal finance management application. Users can securely register and log in, track income and expenses, get automatic spending analysis, set savings goals with progress tracking, and receive AI-generated, personalized financial insights.
 
-> **Disclaimer:** AI insights are educational suggestions based on the information you provide and are not professional financial advice.
 
----
 
 ## Features
 
