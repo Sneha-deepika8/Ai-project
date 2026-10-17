@@ -318,17 +318,6 @@ finpulse-ai/
 
 ---
 
-## Screenshots
-
-_Add screenshots of the Dashboard, Goals, Analytics and AI Insight pages here once the app is running locally._
-
-- `docs/screenshots/dashboard.png`
-- `docs/screenshots/goals.png`
-- `docs/screenshots/analytics.png`
-- `docs/screenshots/ai-insight.png`
-
----
-
 ## Running the Tests
 
 Backend:
